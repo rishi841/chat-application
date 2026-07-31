@@ -12,7 +12,7 @@ const CreateRoom = () => {
     navigator.geolocation.getCurrentPosition(
       async ({ coords }) => {
         try {
-         const API = "https://chat-app-back-kf9x.onrender.com"
+         const API = "http://localhost:3000"
 
                   const res = await axios.post(`${API}/room/create`, {
                  lat: coords.latitude,
@@ -20,8 +20,9 @@ const CreateRoom = () => {
 })
 
           setLink(res.data.link)
-        } catch (err) {
-          console.log("Axios error:", err)
+        } catch (error) {
+           console.log(error.response?.status);
+           console.log(error.response?.data);
           alert("Backend connect nahi ho raha")
         } finally {
           setLoading(false)
@@ -58,6 +59,9 @@ const CreateRoom = () => {
             >
               {link}
             </Link>
+            <Link to="/nearby" className="block mt-4 text-blue-400 hover:underline text-center">
+  Browse Nearby Rooms
+</Link>
           </div>
         )}
 

@@ -16,7 +16,15 @@ const roomSchema = new mongoose.Schema({
   radius: {
     type: Number,
     default: 5   // ✅ important
+  },
+  lastActive:{
+    type:Date,
+    default:Date.now
   }
-})
+},
+{
+  timestamps: true
+}
+)
 
 module.exports = mongoose.model("room", roomSchema);
