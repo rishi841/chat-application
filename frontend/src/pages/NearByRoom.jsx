@@ -8,7 +8,9 @@ const NearbyRooms = () => {
   const [error, setError] = useState('')
 
   const navigate = useNavigate()
-  const API = "http://localhost:3000"
+  const API = "https://chat-application-gyhm.onrender.com
+
+"
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
