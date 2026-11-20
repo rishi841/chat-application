@@ -16,9 +16,7 @@ const JoinRoom = () => {
   const typingTimeoutRef = useRef(null)
   const messageInputRef = useRef(null)
 
-  const API = "https://chat-application-gyhm.onrender.com
-
-"
+  const API = "https://chat-application-gyhm.onrender.com";
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(async ({ coords }) => {
