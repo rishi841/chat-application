@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 
-const API = "https://chat-application-gyhm.onrender.com
-
-"
+const API = "https://chat-application-gyhm.onrender.com";
 
 function hashAngle(str) {
   let hash = 0
